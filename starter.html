@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 <body>
-<div><h1 id="header">Welcome to Emotect</h1></div>
-<form id="frm1" action="/action_page.php">
-    First name: <input type="text" name="fname"><br>
-    Last name: <input type="text" name="lname"><br><br>
-    <input type="button" onclick="myFunction()" value="Submit">
+<h1> Welcome to Emotect! </h1>
+<hr style="height:2px;border:none;border-top:1px solid #555555;" />
+<br><br>
+<form id="form1">
+    First name: <input id="box1" type="text" name="fname"><br>
+    Last name: <input id="box2" type="text" name="lname"><br><br>
+    <input id="submit_button" type="button" onclick="myFunction()" value="Submit">
 </form>
 
 <p id="demo"></p>
@@ -18,7 +20,7 @@
 
 <script>
     function myFunction() {
-        var x = document.getElementById("frm1");
+        var x = document.getElementById("form1");
         var text = "Hello ";
         var i;
         for (i = 0; i < x.length - 1; i++) {
