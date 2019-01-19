@@ -7,16 +7,16 @@
 </head>
 <body>
 <h1> Welcome to Emotect! </h1>
-<hr style="height:2px;border:none;border-top:1px solid #555555;" />
+<hr style="height:2px;border:none;border-top:1px solid #555555;"/>
 <br><br>
 <form id="form1">
-    First name: <input id="box1" type="text" name="fname"><br>
-    Last name: <input id="box2" type="text" name="lname"><br><br>
+    First name: <input id="box1" type="text" name="fname" class = "box"><br><br>
+    Last name: <input id="box2" type="text" name="lname" class = "box"><br><br>
     <input id="submit_button" type="button" onclick="myFunction()" value="Submit">
 </form>
 
 <p id="demo"></p>
-<p id="demo2"></p>
+<form id="demo2"></form>
 
 <script>
     function myFunction() {
@@ -29,10 +29,23 @@
         text += ", tell us your story!";
         document.getElementById("demo").innerHTML = text;
 
-        var y = document.createElement("INPUT");
-        y.setAttribute("type", "text");
-        y.setAttribute("value", "");
-        document.body.appendChild(y);
+        // var y = document.createElement("INPUT");
+        // y.setAttribute("type", "text");
+        // y.setAttribute("value", "");
+        // document.body.appendChild(y);
+
+        var demo2 = document.getElementById("demo2");
+        while (demo2.hasChildNodes()) {
+            demo2.removeChild(demo2.lastChild);
+        }
+
+        demo2.appendChild(document.createTextNode(""));
+        // Create an <input> element, set its type and name attributes
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "story";
+        input.setAttribute("class", "boxlarge");
+        demo2.appendChild(input);
     }
 </script>
 </body>
