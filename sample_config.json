@@ -1,0 +1,1 @@
+{"GLOVE_FILENAME": "../data/glove.6B.50d.txt", "lstm_units": [512, 1024], "num_classes": 13, "iterations": 50, "max_seq_length": 40}
